@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>通用组件实现 | My Cata</title>
+    <meta name="description" content="The description of the site.">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.02104a69.css" as="style"><link rel="preload" href="/assets/js/app.7be3e6e2.js" as="script"><link rel="preload" href="/assets/js/4.829d220f.js" as="script"><link rel="preload" href="/assets/js/6.1e77cfb9.js" as="script"><link rel="prefetch" href="/assets/js/1.fef0d2b1.js"><link rel="prefetch" href="/assets/js/10.5d489062.js"><link rel="prefetch" href="/assets/js/11.38879f00.js"><link rel="prefetch" href="/assets/js/12.3bea96e9.js"><link rel="prefetch" href="/assets/js/13.9c6c61a6.js"><link rel="prefetch" href="/assets/js/14.0f4cafc5.js"><link rel="prefetch" href="/assets/js/15.ce3a05e1.js"><link rel="prefetch" href="/assets/js/16.dc2c036e.js"><link rel="prefetch" href="/assets/js/17.bce1d9f6.js"><link rel="prefetch" href="/assets/js/18.3c17a8ca.js"><link rel="prefetch" href="/assets/js/19.400361bb.js"><link rel="prefetch" href="/assets/js/20.1bffecb9.js"><link rel="prefetch" href="/assets/js/21.f0bd8774.js"><link rel="prefetch" href="/assets/js/22.06c327ea.js"><link rel="prefetch" href="/assets/js/3.0f3e1e06.js"><link rel="prefetch" href="/assets/js/5.a82b71e8.js"><link rel="prefetch" href="/assets/js/7.a966eeaa.js"><link rel="prefetch" href="/assets/js/8.1e4fb106.js"><link rel="prefetch" href="/assets/js/9.7c8c9d93.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.02104a69.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">My Cata</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">作品集</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">作品集</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>指南</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" class="sidebar-link">个人经历</a></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/guide/uni-read/" class="sidebar-heading clickable open"><span>uniapp &amp; H5移动端</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/uni-app.html" class="sidebar-link">应用整体框架实现</a></li><li><a href="/guide/uni-app2.html" class="active sidebar-link">模块与组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#通用组件实现" class="sidebar-link">通用组件实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#多-tab-列表页封装" class="sidebar-link">多 tab 列表页封装</a></li><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#文件管理器封装" class="sidebar-link">文件管理器封装</a></li><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#流程组件实现" class="sidebar-link">流程组件实现</a></li><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#日历组件实现" class="sidebar-link">日历组件实现</a></li></ul></li><li class="sidebar-sub-header"><a href="/guide/uni-app2.html#模块实现" class="sidebar-link">模块实现</a></li></ul></li><li><a href="/guide/uni-app3.html" class="sidebar-link">样式</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/guide/web/" class="sidebar-heading clickable"><span>web端</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/web1.html" class="sidebar-link">模块与组件</a></li><li><a href="/guide/web2.html" class="sidebar-link">样式</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="通用组件实现">通用组件实现</h2> <p>本人封装过列表、文件管理器、审核流程组件、同步异步分段选择组件、自定义日历等等通用组件。方便组员进行开发。</p> <h3 id="多-tab-列表页封装">多 tab 列表页封装</h3> <ul><li>性质：构成程序最重要的组件，常用于简洁数据展示，大多数模块的入口页。</li> <li>组成：循环数据渲染的插槽、可配置的 tab 页、搜索栏、新增与置顶按钮、加载状态与错误提示。</li> <li>功能：切页、触底请求分页与判断、搜索响应、外部调用刷新（下拉，筛选，重载等）。</li> <li><strong>重点：组件复用性，组件通信，插槽</strong></li> <li>演示图:</li></ul> <p><img src="/assets/img/Uni-list.7a48d76e.gif" alt="Uni-list" style="zoom:60%;"> <img src="/assets/img/Uni-list2.3fefbe3a.gif" alt="Uni-list2" style="zoom:60%;"></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 	
+	【k-page】(Page类组件说明文档)
+	·说明：列表页统一组件。根据tab页分为【单列表型】【多列表型】，根据操作还有【左滑列表型】，根据组件还有【组件内置型】
+	·适用场景：长列表加载(基本上只有Page类组件在使用)
+	·特殊需求：需要即时配备保证功能。
+		1.【:scrollTop=&quot;scrollTop&quot;】：该字段将保证置顶功能的正常使用，获取如下
+			onPageScroll(e) {
+				//返回顶部【u-back-top】组件所用方法
+				this.scrollTop = e.scrollTop;
+			}
+		***但如果是组件内使用【:isComponent=&quot;true&quot;】（例如在 Popup 弹出层），则无需该属性。
+	·外部可调用方法：使用 &quot;refs&quot; 调用
+		1.LoadingStart()：加载开始，显示【k-loading】组件。
+		2.LoadingMore()：加载更多，显示【k-loadmore】组件的加载中状态。
+		3.LoadingEnd()：加载结束，计算加载状态，关闭或修改两个加载中组件状态。
+		4.ShowToast(text, (state), (duration))：提示信息，text提示的内容，state提示状态颜色 默认warning橙色，duration提示存在时长 默认1500ms。
+		5.RefreshSwiperHeight()：刷新当前tab页所在swiper项的高度，适用于【多列表型】中存在展开收缩这种改变列表长度的情况的情况。
+	·组件回调方法：使用 &quot;@XXX&quot; 调用
+		1.@loadmore=&quot;LoadMore()&quot;：加载更多、加载下一页
+		2.@add=&quot;GoAdd()&quot;：去新增界面
+		3.@page=&quot;PageChange(index)&quot;：【多列表型】专用，切换tab页时传递页码，index要转到的页码
+		4.@search=&quot;DoSearch(key)&quot;：搜索，key搜索关键字
+	·特殊可选功能：
+		1.是否需要搜索框：【needSearch】默认true。是否使用搜索框。
+		2.是否需要新增：【needAdd】默认false。是否使用新增按钮。
+			(1)【addIcon】：图标替换新增图标，使用u-view的icon图标名字，优先级高于文字。
+			(2)【addText】：文字替换新增图标，优先级低。
+		3.是否需要边框：【needBorder】默认true。对边框padding、边框border不满意的，可设置false以后自行设置样式，可间接操作表格效果。
+		4.是否需要左滑操作：【leftOptions】默认null。当操作简单时，按钮无需浮于表面，可使用该属性变成左滑显示按钮，具体传参见【props】。
+		5.是否为组件使用：【isComponent】默认false。为true则
+			(1)置顶按钮自定义永久显示;
+			(2)其他方法识别是否到达底部（内部控制）;
+			(3)组件使用时，【k-page】组件外层父级需要挂载【 class=&quot;kc-scroll-father&quot;】
+	·插槽：
+		1.【list】：此插槽显示每格列表内容，传递值【 v-slot:list=&quot;{ item, index }&quot;】。
+		2.【search-header】：此插槽显示位于 tab组件下方、搜索框上方 内容，将不会滚出屏幕。
+		2.【header】：此插槽显示位于 tab组件下方、列表上方 内容，将不会滚出屏幕。
+		3.【list-header】：此插槽显示位于 tab组件下方、列表上方 内容，正常滚动。
+		3.【list-footer】：此插槽显示位于 列表下方 内容，正常滚动。
+		2.【footer】：此插槽显示位于 列表下方 内容，将不会滚出屏幕。
+	·例子：
+		1.单列表型
+		【list】：列表信息，用于回调插槽和判断加载状态
+		【total】：列表信息，用于判断加载状态
+		【scrollTop】：保证置顶功能的正常使用
+		【hint】：搜索框的内容为空时显示的信息
+		【@loadmore=&quot;LoadMore()&quot;】：加载更多、加载下一页
+		【@add=&quot;GoAdd()&quot;】：去新增界面
+		&lt;lgj-k-page
+			ref=&quot;kPage&quot;
+			:list=&quot;dataList.list&quot;
+			:total=&quot;dataList.total&quot;
+			:scrollTop=&quot;scrollTop&quot;
+			:needAdd=&quot;true&quot;
+			hint=&quot;搜索&quot;
+			@loadmore=&quot;LoadMore()&quot;
+			@add=&quot;GoAdd()&quot;
+		&gt;
+			&lt;template v-slot:list=&quot;{ item, index }&quot;&gt;
+				&lt;view @tap=&quot;GoDetail(item)&quot;&gt;
+					自定义显示列表每条的内容、排版
+				&lt;/view&gt;
+			&lt;/template&gt;
+		&lt;/lgj-k-page&gt;
+		
+		2.多列表型
+		【list】【total】【scrollTop】同上
+		【tab】：分页tab信息，必备值{current，tabList:[name, value]}
+		【hints】：搜索框的内容为空时分别显示每个tab页的信息，为空或数量不足时，将补入对应数量的【hint】属性的内容
+		【@loadmore=&quot;LoadMore()&quot;】：加载更多、加载下一页
+		【@add=&quot;GoAdd()&quot;】：去新增界面
+		【@page=&quot;PageChange(index)&quot;】：【多列表型】专用，切换tab页时传递页码，index要转到的页码
+		【@search=&quot;DoSearch(key)&quot;】：搜索，key搜索关键字
+		&lt;lgj-k-page
+			ref=&quot;kPage&quot;
+			:list=&quot;dataList.list&quot;
+			:total=&quot;dataList.total&quot;
+			:tab=&quot;tab&quot;
+			:scrollTop=&quot;scrollTop&quot;
+			:needAdd=&quot;true&quot;
+			:hints=&quot;['工程部位 | 任务描述 | 检查人','工程部位 | 检查人']&quot;
+			@page=&quot;PageChange(index)&quot;
+			@search=&quot;DoSearch(key)&quot;
+			@loadmore=&quot;LoadMore()&quot;
+			@add=&quot;GoAdd()&quot;
+		&gt;
+			&lt;template v-slot:list=&quot;{ item, index }&quot;&gt;
+				下面的表现形式随便怎么写
+				&lt;view v-if=&quot;tab.current == 0&quot; @tap=&quot;GoDetail(item)&quot;&gt;
+					tab页第一页列表
+				&lt;/view&gt;
+				&lt;view v-if=&quot;tab.current == 1&quot; @tap=&quot;GoDetail2(item)&quot;&gt;
+					tab页第二页列表
+				&lt;/view&gt;
+				...第n页
+			&lt;/template&gt;
+		&lt;/lgj-k-page&gt;
+		
+		.....4种模式....
+ --&gt;</span>
+</code></pre></div><h3 id="文件管理器封装">文件管理器封装</h3> <ul><li><p>性质：功能性组件，常用于表单页文档、图片、视频上传，详情界面的文件记录与图像展示。</p></li> <li><p>组成：图片、视频上传、文件上传按钮，可配置的标题，图片视频预览图与详情，文件列表与详情。</p></li> <li><p>功能：支持文件上传与文件浏览器。可配置的三种上传模式，通过参数进行配置。</p> <ul><li>图片支持：手机相册单个多个选取、调用相机拍摄图片、配置水印、上传图片，多功能图片预览与下载。</li> <li>视频支持：手机相册单个多个选取、相机拍摄视频上传，视频播放功能与下载。</li> <li>文件支持：手机本地选取上传，下载文件调用本地功能打开。</li></ul></li> <li><p><strong>重点：复杂的组件间的组合，灵活清晰的参数设置，移动端本地应用、原生应用的调起。</strong></p></li> <li><p>演示图：</p> <img src="/assets/img/Uni-files.c0daac23.gif" alt="文件管理器" style="zoom:80%;"></li></ul> <h3 id="流程组件实现">流程组件实现</h3> <ul><li><p>性质：满足复杂流程处理的通用组件。</p></li> <li><p>组成：流程图，当前过程图，包含人员组织选择树的处理表单。</p></li> <li><p>功能：通过简单的参数配置，与后台交互，获取流程；显示可视化流程数据与流程处理。每个部分可拆解，可以简单嵌入列表页、详情页。</p></li> <li><p><strong>重点：复杂的后台交互，一个组件满足一套需求。</strong></p></li> <li><p>演示图: - 详情内嵌：
+<img src="/assets/img/Uni-流程.b8416bd9.gif" alt="流程详情内嵌" style="zoom:67%;"> <img src="/assets/img/Uni-详情内嵌2.48b4ae5e.png" alt="流程详情内嵌" style="zoom:67%;"> - 列表嵌入：</p> <img src="/assets/img/Uni-流程2.b93f24a1.gif" alt="流程" style="zoom:67%;"></li></ul> <h3 id="日历组件实现">日历组件实现</h3> <ul><li><p>性质：非框架自带日历，提供更多自义定内容、样式的日历。</p></li> <li><p>组成：年、月，一个月日期的日期显示，日期区域内的自定义显示内容。</p></li> <li><p>重点：日期 js 的熟悉。</p></li> <li><p>演示图:</p> <img src="/assets/img/H5-日历.acbe4f23.png" alt="日历组件" style="zoom:80%;"></li> <li><p>关键代码</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">visibleDays</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token comment">// 计算当月展示日期</span>
+  <span class="token keyword">let</span> <span class="token punctuation">{</span>
+    time<span class="token punctuation">:</span> <span class="token punctuation">{</span> year<span class="token punctuation">,</span> month <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    month_data<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+  <span class="token keyword">let</span> currentFirstDay <span class="token operator">=</span> <span class="token function">getDate</span><span class="token punctuation">(</span>year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> week <span class="token operator">=</span> currentFirstDay<span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> startDay <span class="token operator">=</span> currentFirstDay <span class="token operator">-</span> week <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">24</span>
+  <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">42</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> day <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>startDay <span class="token operator">+</span> i <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> <span class="token punctuation">{</span> year<span class="token punctuation">:</span> dayY<span class="token punctuation">,</span> month<span class="token punctuation">:</span> dayM<span class="token punctuation">,</span> day<span class="token punctuation">:</span> dayD <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getYearMonthDay</span><span class="token punctuation">(</span>day<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> extra <span class="token operator">=</span> month_data<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>
+      <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> x<span class="token punctuation">.</span>date <span class="token operator">==</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">Number</span><span class="token punctuation">(</span>dayY<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">Number</span><span class="token punctuation">(</span>dayM<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">Number</span><span class="token punctuation">(</span>dayD<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>extra <span class="token operator">&amp;&amp;</span> extra<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      data <span class="token operator">=</span> extra<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+      day<span class="token punctuation">,</span>
+      data<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="模块实现">模块实现</h2> <p>除了全局性的功能实现，还参与具体模块的开发。这里仅简要列举一些特色模块</p> <table><thead><tr><th style="text-align:center;">页面</th> <th style="text-align:center;">演示</th></tr></thead> <tbody><tr><td style="text-align:center;">视频页</td> <td style="text-align:center;"><img src="/assets/img/Uni-视频播放.ca0f959b.gif" alt="H5-mode1" style="zoom:67%;"></td></tr> <tr><td style="text-align:center;">积分榜</td> <td style="text-align:center;"><img src="/assets/img/H5-mode1.a8567753.png" alt="H5-mode1" style="zoom:67%;"></td></tr> <tr><td style="text-align:center;">时间线</td> <td style="text-align:center;"><img src="/assets/img/H5-mode2.341b656a.png" alt="H5-mode2" style="zoom:67%;"></td></tr> <tr><td style="text-align:center;">多样图表</td> <td style="text-align:center;"><img src="/assets/img/Uni-mode2.3d7782b8.gif" alt="Uni-mode2" style="zoom:67%;"></td></tr> <tr><td style="text-align:center;">通讯录</td> <td style="text-align:center;"><img src="/assets/img/Uni-mode3.757dbc86.gif" alt="Uni-mode3" style="zoom:67%;"></td></tr> <tr><td style="text-align:center;">社交功能详情页</td> <td style="text-align:center;"><img src="/assets/img/Uni-mode4.af636e3e.gif" alt="Uni-mode4" style="zoom:67%;"></td></tr></tbody></table></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">2022年3月14日16:53:08:</span> <span class="time">3/16/2022, 6:22:21 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/uni-app.html" class="prev">应用整体框架实现</a></span> <span class="next"><a href="/guide/uni-app3.html">样式</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7be3e6e2.js" defer></script><script src="/assets/js/4.829d220f.js" defer></script><script src="/assets/js/6.1e77cfb9.js" defer></script>
+  </body>
+</html>
